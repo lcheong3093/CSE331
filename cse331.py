@@ -28,7 +28,7 @@ class HTTP_Controller:
                 if(parts.__len__() == 3):
                     method = flow.request.method
                     request_method = parts[0][15:]
-                    parameter = parts[1][11:]
+                    parameter = parts[1][10:]
                     contains = parts[2][10:-1]
 
                     if (request_method == "GET"):
