@@ -17,8 +17,8 @@ class HTTP_Controller:
 
                 # parts = [HEADER:____,CONTAINS:"______"]
                 if(parts.__len__() == 2):
-                    header = parts[0][8:]
-                    contains = parts[1][10:-1]
+                    header = parts[0][7:]
+                    contains = parts[1][11:-1]
                     user_agents = flow.request.headers[header]
                     if (contains in user_agents):
                         log.write("User-Agent attack")
@@ -29,7 +29,7 @@ class HTTP_Controller:
                     method = flow.request.method
                     request_method = parts[0][15:]
                     parameter = parts[1][11:]
-                    contains = parts[2][10:-1]
+                    contains = parts[2][11:-1]
 
                     if (request_method == "GET"):
                         if (method == "GET"):
