@@ -9,7 +9,8 @@ class HTTP_Controller:
         log = open("log.txt", "w")
         drop = False
 
-        with open("./rules.txt", "r") as rules:
+        with open("./rules.txt", "r") as file:
+            rules = file.readlines()
             for rule in rules:
                 tmp = rule.split(" ") #remove comment
                 parts = tmp.split(",")
