@@ -13,7 +13,7 @@ class HTTP_Controller:
             rules = file.readlines()
             for rule in rules:
                 tmp = rule.split(" ") #remove comment
-                parts = tmp.split(",")
+                parts = tmp.split(",")[0]
 
                 # parts = [HEADER:____,CONTAINS:"______"]
                 if(parts.__len__() == 2):
