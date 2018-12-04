@@ -12,8 +12,8 @@ class HTTP_Controller:
         with open("./rules.txt", "r") as file:
             rules = file.readlines()
             for rule in rules:
-                tmp = rule.split(" ") #remove comment
-                parts = tmp.split(",")[0]
+                tmp = rule.split(" ")[0] #remove comment
+                parts = tmp.split(',')
 
                 # parts = [HEADER:____,CONTAINS:"______"]
                 if(parts.__len__() == 2):
